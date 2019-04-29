@@ -1,31 +1,31 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Bell</string>
-    <string name="ringdroid_app_name">Ringdroid</string>
+    <string name="app_name">RTone</string>
+    <string name="ringdroid_app_name">RTone</string>
 
     <!--
      Main / media select activity
      -->
 
-    <string name="main_activity_label">Ringdroid</string>
+    <string name="main_activity_label">RTone</string>
 
     <string name="search_edit_box">Search</string>
 
     <string name="button_start_record_activity">Record New</string>
 
-    <string name="sdcard_readonly">Sorry, the SD Card is mounted as read-only and Ringdroid requires it to be writable.</string>
-    <string name="no_sdcard">Sorry, Ringdroid can\'t run unless you have an SD Card inserted.</string>
-    <string name="sdcard_shared">Sorry, Ringdroid can\'t run while your handset is mounted as a USB device.</string>
+    <string name="sdcard_readonly">Sorry, the SD Card is mounted as read-only and RTone requires it to be writable.</string>
+    <string name="no_sdcard">Sorry, RTone can\'t run unless you have an SD Card inserted.</string>
+    <string name="sdcard_shared">Sorry, RTone can\'t run while your handset is mounted as a USB device.</string>
 
     <string name="button_options">Options</string>
-    <string name="about_title">About Ringdroid</string>
-    <string name="about_text"><![CDATA[Use Ringdroid to edit MP3, OGG, WAV, AAC, and AMR audio files and create ringtones, alarms, and notifications from them.\n\nTip: copy audio files to your SD card using a USB cable.\n\nTip: tap anywhere on the waveform to start playing at that position.\n\nTip: while playing, tap the word Start or End to quickly set the start and end markers to the current playback time.\n\nVersion %s\n\nDeveloper: Dominic Mazzoni, Nicolas Faralli\nGraphics: Joseph Wain\nSupport and evangelizing: Eugene Koh\nEnhancements: Dan Klufas\n\nRingdroid is free software, distributed under the Apache 2.0 license.  Source code is on github.com/google/ringdroid\n]]></string>
+    <string name="about_title">About RTone</string>
+    <string name="about_text"><![CDATA[Use RTone to edit MP3, OGG, WAV, AAC, and AMR audio files and create ringtones, alarms, and notifications from them.\n\nTip: copy audio files to your SD card using a USB cable.\n\nTip: tap anywhere on the waveform to start playing at that position.\n\nTip: while playing, tap the word Start or End to quickly set the start and end markers to the current playback time.]]></string>
 
     <string name="choose_contact_title">Assign ringtone to which contact?</string>
     <string name="success_contact_ringtone">Successfully assigned ringtone to:</string>
 
 
-    <string name="bad_extension_error">Sorry, Ringdroid is not yet able to edit files of type</string>
-    <string name="no_extension_error">Sorry, Ringdroid can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+    <string name="bad_extension_error">Sorry, RTone is not yet able to edit files of type</string>
+    <string name="no_extension_error">Sorry, RTone can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
 
 
     <!--
@@ -123,13 +123,13 @@
     <string name="delete_audio">Delete Audio</string>
 
     <string name="confirm_delete_ringdroid">Are you sure?</string>
-    <string name="confirm_delete_non_ringdroid">Are you sure?  This file was not created using Ringdroid!</string>
+    <string name="confirm_delete_non_ringdroid">Are you sure?  This file was not created using RTone!</string>
 
     <string name="delete_ok_button">Delete</string>
     <string name="delete_cancel_button">Cancel</string>
 
     <string name="delete_failed">Unable to delete file</string>
-    <string name="artist_name">Ringdroid artist</string>
+    <string name="artist_name">RTone artist</string>
 
 
     <!--
@@ -154,7 +154,7 @@
     <string name="set_ringtone">Set Ringtone!</string>
     <string name="write_setting_text">Ringtone make requiers permission to \'Write Settings\' in order to set your ringtone.\n After granting permission, try setting your ringtone again.</string>
     <string name="permission_required">Permission required.</string>
-    <string name="permission_required_desc">Allow Bell to access your ringtones and music library</string>
+    <string name="permission_required_desc">Allow RTone to access your ringtones and music library</string>
     <string name="allow">Allow</string>
     <string name="contacts">Contacts</string>
     <string name="search_library">Search..</string>
@@ -185,7 +185,20 @@
         <item name="grey_900" type="color">#212121</item>
         <item name="blue_grey_900" type="color">#263238</item>
     </array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
+    <string name="menu_home">About Us</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 
 
 </resources>

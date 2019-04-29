@@ -3,9 +3,9 @@ We not send you receive any thing of you data.
 It's purely safe to use this app.
 
 
-Bell Ringtone Maker
+RTone Ringtone Maker
 ================
-Bell is a free open source Android application for recording and editing sounds, and creating ringtones, directly on the handset.
+RTone is a free open source Android application for recording and editing sounds, and creating ringtones, directly on the handset.
 
 Screenshots
 ============
@@ -31,7 +31,7 @@ Libraries Used
 ===========================
 * Android Support Library - http://developer.android.com/tools/support-library/index.html
 * Universal image loader - https://github.com/nostra13/Android-Universal-Image-Loader
-* Ringdroid - https://github.com/google/ringdroid
+* RTone - https://github.com/google/ringdroid
 
 License
 ========

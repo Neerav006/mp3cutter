@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.mp3cutter.ringtonemaker">
+    package="com.codefuel.ringtonemaker">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <supports-screens android:anyDensity="true"/>
+    <supports-screens android:anyDensity="true" />
 
     <application
         android:allowBackup="true"
@@ -18,12 +18,23 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
         <activity
             android:name=".Activities.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -31,23 +42,24 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
             android:hardwareAccelerated="true"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize">
             <intent-filter android:label="@string/edit_intent">
-                <action android:name="android.intent.action.EDIT"/>
+                <action android:name="android.intent.action.EDIT" />
 
-                <data android:mimeType="audio/*"/>
+                <data android:mimeType="audio/*" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activities.ChooseContactActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.RingdroidSelectActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
+
+        <activity android:theme="@style/AppTheme" android:name=".Activities.AboutDevActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
