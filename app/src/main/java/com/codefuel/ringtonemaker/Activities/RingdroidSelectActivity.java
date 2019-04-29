@@ -138,12 +138,7 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
 
         Utils.initImageLoader(mContext);
 
-        mAllowButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utils.checkAndRequestPermissions(RingdroidSelectActivity.this, true);
-            }
-        });
+        mAllowButton.setOnClickListener(v -> Utils.checkAndRequestPermissions(RingdroidSelectActivity.this, true));
 
         if (Utils.checkAndRequestPermissions(this, false)) {
             loadData();
