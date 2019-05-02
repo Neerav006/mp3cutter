@@ -10,16 +10,19 @@ import android.widget.ImageView;
 import com.asksira.loopingviewpager.LoopingPagerAdapter;
 import com.bumptech.glide.Glide;
 import com.codefuel.ringtonemaker.R;
+import com.codefuel.ringtonemaker.ViewPagerClickListener;
 
 import java.util.ArrayList;
 
 public class AutoScrollpagerAdapter extends LoopingPagerAdapter<String> {
     private Context context;
     private ArrayList<String> imgList;
-    public AutoScrollpagerAdapter(Context context, ArrayList<String> itemList, boolean isInfinite) {
+    private ViewPagerClickListener viewPagerClickListener;
+    public AutoScrollpagerAdapter(ViewPagerClickListener viewPagerClickListener, Context context, ArrayList<String> itemList, boolean isInfinite) {
         super(context, itemList, isInfinite);
         this.context = context;
         this.imgList = itemList;
+        this.viewPagerClickListener = viewPagerClickListener;
     }
 
     @SuppressLint("InflateParams")
@@ -31,6 +34,14 @@ public class AutoScrollpagerAdapter extends LoopingPagerAdapter<String> {
 
     @Override
     protected void bindView(View convertView, int listPosition) {
+
+        convertView.setOnClickListener(v -> {
+
+             if(viewPagerClickListener!=null){
+                 viewPagerClickListener.onPageClicked(imgList.get(listPosition));
+             }
+        });
+
         ImageView imageView = convertView.findViewById(R.id.ivLogo);
         Glide.with(context).load(imgList.get(listPosition)).into(imageView);
     }

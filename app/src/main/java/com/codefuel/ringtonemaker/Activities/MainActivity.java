@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -21,6 +22,7 @@ import com.codefuel.ringtonemaker.Adapters.AutoScrollpagerAdapter;
 import com.codefuel.ringtonemaker.Models.Banner;
 import com.codefuel.ringtonemaker.Models.MyBanner;
 import com.codefuel.ringtonemaker.R;
+import com.codefuel.ringtonemaker.ViewPagerClickListener;
 import com.codefuel.ringtonemaker.common.RetrofitClient;
 
 import java.util.ArrayList;
@@ -90,7 +92,12 @@ public class MainActivity extends AppCompatActivity
 
 
                         final AutoScrollpagerAdapter autoScrollpagerAdapter =
-                                new AutoScrollpagerAdapter(MainActivity.this, XMENArray, true);
+                                new AutoScrollpagerAdapter(url -> {
+
+                                    Log.e("page clicked", url);
+
+                                }, MainActivity.this, XMENArray, true);
+
 
                         loopingViewPager.setAdapter(autoScrollpagerAdapter);
                     }
