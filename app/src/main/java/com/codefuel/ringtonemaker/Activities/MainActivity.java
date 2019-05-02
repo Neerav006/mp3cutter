@@ -19,6 +19,7 @@ import android.view.Menu;
 import com.asksira.loopingviewpager.LoopingPagerAdapter;
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.codefuel.ringtonemaker.Adapters.AutoScrollpagerAdapter;
+import com.codefuel.ringtonemaker.Dialogs.AdsViewDialogFragment;
 import com.codefuel.ringtonemaker.Models.Banner;
 import com.codefuel.ringtonemaker.Models.MyBanner;
 import com.codefuel.ringtonemaker.R;
@@ -95,6 +96,12 @@ public class MainActivity extends AppCompatActivity
                                 new AutoScrollpagerAdapter(url -> {
 
                                     Log.e("page clicked", url);
+
+                                    // call the dialog fragment
+                                    AdsViewDialogFragment adsViewDialogFragment = AdsViewDialogFragment
+                                            .newInstance(url);
+                                    adsViewDialogFragment.show(getSupportFragmentManager(), "dialog");
+
 
                                 }, MainActivity.this, XMENArray, true);
 
