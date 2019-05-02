@@ -1212,7 +1212,7 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
         mSaveSoundFileThread = new Thread() {
             public void run() {
                 // Try AAC first.
-                String outPath = makeRingtoneFilename(title, ".m4a");
+                String outPath = makeRingtoneFilename(title, ".mp3");
                 if (outPath == null) {
                     Runnable runnable = new Runnable() {
                         public void run() {
