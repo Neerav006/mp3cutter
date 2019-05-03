@@ -1243,7 +1243,7 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
                 subdir = "/ringtones/";
                 break;
         }
-        String parentdir = rootDir + "audio/";
+        String parentdir = rootDir + subdir;
 
         // Create the parent directory
         File parentDirFile = new File(parentdir);
