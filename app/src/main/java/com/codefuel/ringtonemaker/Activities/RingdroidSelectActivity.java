@@ -54,6 +54,8 @@ import com.codefuel.ringtonemaker.R;
 import com.codefuel.ringtonemaker.RTone.Constants;
 import com.codefuel.ringtonemaker.Ringdroid.Utils;
 import com.codefuel.ringtonemaker.Views.FastScroller;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -72,7 +74,7 @@ import static com.codefuel.ringtonemaker.RTone.Constants.REQUEST_ID_RECORD_AUDIO
 public class RingdroidSelectActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     private SearchView mSearchView;
-
+    private AdView mAdView;
 
     // Result codes
     private static final int REQUEST_CODE_EDIT = 1;
@@ -147,6 +149,11 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
             mPermissionLayout.setVisibility(View.VISIBLE);
             mRecyclerView.setVisibility(View.GONE);
         }
+
+
+        mAdView = findViewById(R.id.bannerAd);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
 

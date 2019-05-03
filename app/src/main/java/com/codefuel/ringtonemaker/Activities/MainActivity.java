@@ -25,6 +25,7 @@ import com.codefuel.ringtonemaker.Models.MyBanner;
 import com.codefuel.ringtonemaker.R;
 import com.codefuel.ringtonemaker.ViewPagerClickListener;
 import com.codefuel.ringtonemaker.common.RetrofitClient;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -44,6 +45,12 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        MobileAds.initialize(MainActivity.this, "ca-app-pub-3940256099942544~3347511713");
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null)
