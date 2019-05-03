@@ -1216,7 +1216,7 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
             externalRootDir += "/";
         }
 
-        String rootDir = externalRootDir + "media/";
+        String rootDir = externalRootDir + "media";
         File rootFile = new File(rootDir);
         if (!rootFile.exists()){
             rootFile.mkdir();
