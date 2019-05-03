@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefuel.ringtonemaker.RTone;
+package com.codefuel.ringtonemaker.Ringdroid;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -30,7 +30,7 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 
 import com.codefuel.ringtonemaker.R;
-import com.codefuel.ringtonemaker.RTone.soundfile.SoundFile;
+import com.codefuel.ringtonemaker.Ringdroid.soundfile.SoundFile;
 
 
 /**

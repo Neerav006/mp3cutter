@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefuel.ringtonemaker.RTone;
+package com.codefuel.ringtonemaker.Ringdroid;
 
 import android.app.Activity;
 import android.database.Cursor;

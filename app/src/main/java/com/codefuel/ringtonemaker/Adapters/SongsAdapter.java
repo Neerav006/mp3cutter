@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.codefuel.ringtonemaker.Activities.RingdroidSelectActivity;
 import com.codefuel.ringtonemaker.Models.SongsModel;
 import com.codefuel.ringtonemaker.R;
-import com.codefuel.ringtonemaker.RTone.Utils;
+import com.codefuel.ringtonemaker.Ringdroid.Utils;
 import com.codefuel.ringtonemaker.Views.BubbleTextGetter;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;

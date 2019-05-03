@@ -9,7 +9,8 @@ import android.widget.TextView;
 import com.codefuel.ringtonemaker.R;
 import com.codefuel.ringtonemaker.Activities.ChooseContactActivity;
 import com.codefuel.ringtonemaker.Models.ContactsModel;
-import com.codefuel.ringtonemaker.RTone.Utils;
+import com.codefuel.ringtonemaker.Ringdroid.Utils;
+
 
 import java.util.ArrayList;
 

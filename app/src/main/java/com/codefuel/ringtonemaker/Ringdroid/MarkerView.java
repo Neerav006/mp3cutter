@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefuel.ringtonemaker.RTone;
+package com.codefuel.ringtonemaker.Ringdroid;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -34,7 +34,7 @@ import android.widget.ImageView;
  * accelerating as the user holds down the left or right arrows
  * while this control is focused.
  */
-public class MarkerView extends ImageView {
+public class MarkerView extends android.support.v7.widget.AppCompatImageView {
 
     public interface MarkerListener {
         public void markerTouchStart(MarkerView marker, float pos);

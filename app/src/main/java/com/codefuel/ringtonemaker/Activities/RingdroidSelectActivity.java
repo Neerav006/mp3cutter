@@ -52,7 +52,7 @@ import com.codefuel.ringtonemaker.Adapters.SongsAdapter;
 import com.codefuel.ringtonemaker.Models.SongsModel;
 import com.codefuel.ringtonemaker.R;
 import com.codefuel.ringtonemaker.RTone.Constants;
-import com.codefuel.ringtonemaker.RTone.Utils;
+import com.codefuel.ringtonemaker.Ringdroid.Utils;
 import com.codefuel.ringtonemaker.Views.FastScroller;
 
 import java.util.ArrayList;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codefuel.ringtonemaker.RTone.soundfile;
+package com.codefuel.ringtonemaker.Ringdroid.soundfile;
 
 class Atom {  // note: latest versions of spec simply call it 'box' instead of 'atom'.
     private int mSize;  // includes atom header (8 bytes)

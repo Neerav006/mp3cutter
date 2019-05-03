@@ -1,4 +1,4 @@
-package com.codefuel.ringtonemaker.RTone;
+package com.codefuel.ringtonemaker.Ringdroid;
 
 import android.Manifest;
 import android.app.Activity;
@@ -39,9 +39,6 @@ import static com.codefuel.ringtonemaker.RTone.Constants.REQUEST_ID_MULTIPLE_PER
 import static com.codefuel.ringtonemaker.RTone.Constants.REQUEST_ID_READ_CONTACTS_PERMISSION;
 import static com.codefuel.ringtonemaker.RTone.Constants.REQUEST_ID_RECORD_AUDIO_PERMISSION;
 
-/**
- * Created by REYANSH on 4/8/2017.
- */
 
 public class Utils {
 
@@ -106,17 +103,17 @@ public class Utils {
                 String fileType = "";
                 try {
                     if (cursor.getString(6).equalsIgnoreCase("1")) {
-                        fileType = Constants.IS_RINGTONE;
+                        fileType = com.codefuel.ringtonemaker.RTone.Constants.IS_RINGTONE;
                     } else if (cursor.getString(7).equalsIgnoreCase("1")) {
-                        fileType = Constants.IS_ALARM;
+                        fileType = com.codefuel.ringtonemaker.RTone.Constants.IS_ALARM;
                     } else if (cursor.getString(8).equalsIgnoreCase("1")) {
-                        fileType = Constants.IS_NOTIFICATION;
+                        fileType = com.codefuel.ringtonemaker.RTone.Constants.IS_NOTIFICATION;
                     } else {
-                        fileType = Constants.IS_MUSIC;
+                        fileType = com.codefuel.ringtonemaker.RTone.Constants.IS_MUSIC;
                     }
                 } catch (Exception e) {
                     //lets assume its ringtone.
-                    fileType = Constants.IS_RINGTONE;
+                    fileType = com.codefuel.ringtonemaker.RTone.Constants.IS_RINGTONE;
                 }
 
                 SongsModel song = new SongsModel(

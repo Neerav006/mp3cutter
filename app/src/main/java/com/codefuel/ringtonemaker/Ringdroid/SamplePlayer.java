@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package com.codefuel.ringtonemaker.RTone;
+package com.codefuel.ringtonemaker.Ringdroid;
 
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 
-import com.codefuel.ringtonemaker.RTone.soundfile.SoundFile;
+
+import com.codefuel.ringtonemaker.Ringdroid.soundfile.SoundFile;
 
 import java.nio.ShortBuffer;
 
