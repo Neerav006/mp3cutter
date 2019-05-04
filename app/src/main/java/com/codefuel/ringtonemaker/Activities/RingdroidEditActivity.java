@@ -11,11 +11,13 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -1218,11 +1220,11 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
 
         String rootDir = externalRootDir + "media";
         File rootFile = new File(rootDir);
-        if (!rootFile.exists()){
+        if (!rootFile.exists()) {
             rootFile.mkdir();
         }
-        File innerDir = new File(rootDir,"audio");
-        if(!innerDir.exists()){
+        File innerDir = new File(rootDir, "audio");
+        if (!innerDir.exists()) {
             innerDir.mkdir();
         }
 
@@ -1248,7 +1250,7 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
         // Create the parent directory
         File parentDirFile = new File(parentdir);
         try {
-            if(!parentDirFile.exists()) {
+            if (!parentDirFile.exists()) {
                 parentDirFile.mkdir();
             }
         } catch (Exception e) {
@@ -1499,6 +1501,19 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
             finish();
             return;
         }
+
+        // Check for system write setting.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.System.canWrite(RingdroidEditActivity.this)) {
+
+                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + RingdroidEditActivity.this.getPackageName()));
+                RingdroidEditActivity.this.startActivity(intent);
+                return;
+            }
+
+        }
+
 
         // If it's a notification, give the user the option of making
         // this their default notification.  If they say no, we're finished.
