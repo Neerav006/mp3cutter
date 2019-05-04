@@ -73,20 +73,17 @@ import static com.codefuel.ringtonemaker.RTone.Constants.REQUEST_ID_RECORD_AUDIO
  */
 public class RingdroidSelectActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
-    private SearchView mSearchView;
-    private AdView mAdView;
-
     // Result codes
     private static final int REQUEST_CODE_EDIT = 1;
     private static final int REQUEST_CODE_CHOOSE_CONTACT = 2;
-
     // Context menu
     private static final int CMD_EDIT = 4;
     private static final int CMD_DELETE = 5;
     private static final int CMD_SET_AS_DEFAULT = 6;
     private static final int CMD_SET_AS_CONTACT = 7;
     int mPos;
-
+    private SearchView mSearchView;
+    private AdView mAdView;
     /**
      * Called when the activity is first created.
      */
@@ -428,7 +425,7 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,
                                                 int whichButton) {
-                                onDelete();
+                                onDelete(pos);
                             }
                         })
                 .setNegativeButton(
@@ -442,7 +439,7 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
                 .show();
     }
 
-    private void onDelete() {
+    private void onDelete(int pos) {
 //        Cursor c = mAdapter.getCursor();
 //        int dataIndex = c.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
 //        String filename = c.getString(dataIndex);
@@ -458,7 +455,19 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
 //        }
 //
 //        String itemUri = c.getString(uriIndex) + "/" + c.getString(c.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
-//        getContentResolver().delete(Uri.parse(itemUri), null, null);
+        int _id = getContentResolver().delete(getInternalUri(pos), null, null);
+        if (_id == 0) {
+            int _exId = getContentResolver().delete(getExtUri(pos), null, null);
+            if (_exId == 1) {
+                Toast.makeText(RingdroidSelectActivity.this, "Successfully deleted", Toast.LENGTH_LONG).show();
+                finish();
+            }
+            Log.e("delete inner id", String.valueOf(_exId));
+        } else {
+            Toast.makeText(RingdroidSelectActivity.this, "Successfully deleted", Toast.LENGTH_LONG).show();
+            finish();
+        }
+        Log.e("delete id", String.valueOf(_id));
     }
 
     private void showFinalAlert(CharSequence message) {
