@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("Home");
 
         loopingViewPager = findViewById(R.id.vpAds);
-        getBanner = RetrofitClient.getClient("http://patidar.codefuelindia.com/").create(GetBanner.class);
+        getBanner = RetrofitClient.getClient("http://dnote.xyz/advertise/").create(GetBanner.class);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity
 
     interface GetBanner {
 
-        @POST("banner/bannerlistapi/")
+        @POST("Banner/bannerlistapi/")
         Call<MyBanner> getBanner();
 
     }
