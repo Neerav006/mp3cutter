@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity
         MobileAds.initialize(MainActivity.this, "ca-app-pub-3940256099942544~3347511713");
 
 
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null)
@@ -102,12 +101,12 @@ public class MainActivity extends AppCompatActivity
                         final AutoScrollpagerAdapter autoScrollpagerAdapter =
                                 new AutoScrollpagerAdapter(url -> {
 
-                                    Log.e("page clicked", url);
+                                    //TODO open web url in browser intent
 
-                                    // call the dialog fragment
-                                    AdsViewDialogFragment adsViewDialogFragment = AdsViewDialogFragment
-                                            .newInstance(url);
-                                    adsViewDialogFragment.show(getSupportFragmentManager(), "dialog");
+//                                    // call the dialog fragment
+//                                    AdsViewDialogFragment adsViewDialogFragment = AdsViewDialogFragment
+//                                            .newInstance(url);
+//                                    adsViewDialogFragment.show(getSupportFragmentManager(), "dialog");
 
 
                                 }, MainActivity.this, XMENArray, true);
