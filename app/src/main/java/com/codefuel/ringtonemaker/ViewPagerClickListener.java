@@ -2,5 +2,5 @@ package com.codefuel.ringtonemaker;
 
 public interface ViewPagerClickListener {
 
-    void onPageClicked(String url);
+    void onPageClicked(String url,String webSite);
 }

@@ -1,6 +1,7 @@
 package com.codefuel.ringtonemaker.Activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -99,9 +100,16 @@ public class MainActivity extends AppCompatActivity
 
 
                         final AutoScrollpagerAdapter autoScrollpagerAdapter =
-                                new AutoScrollpagerAdapter(url -> {
+                                new AutoScrollpagerAdapter((url, webSite) -> {
 
-                                    //TODO open web url in browser intent
+                                    if (webSite != null && webSite.startsWith("http")) {
+
+                                        Intent i = new Intent(Intent.ACTION_VIEW);
+                                        i.setData(Uri.parse(webSite));
+                                        startActivity(i);
+
+                                    }
+
 
 //                                    // call the dialog fragment
 //                                    AdsViewDialogFragment adsViewDialogFragment = AdsViewDialogFragment
@@ -109,7 +117,7 @@ public class MainActivity extends AppCompatActivity
 //                                    adsViewDialogFragment.show(getSupportFragmentManager(), "dialog");
 
 
-                                }, MainActivity.this, XMENArray, true);
+                                }, MainActivity.this, bannerArrayList, true);
 
 
                         loopingViewPager.setAdapter(autoScrollpagerAdapter);

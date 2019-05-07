@@ -9,16 +9,17 @@ import android.widget.ImageView;
 
 import com.asksira.loopingviewpager.LoopingPagerAdapter;
 import com.bumptech.glide.Glide;
+import com.codefuel.ringtonemaker.Models.Banner;
 import com.codefuel.ringtonemaker.R;
 import com.codefuel.ringtonemaker.ViewPagerClickListener;
 
 import java.util.ArrayList;
 
-public class AutoScrollpagerAdapter extends LoopingPagerAdapter<String> {
+public class AutoScrollpagerAdapter extends LoopingPagerAdapter<Banner> {
     private Context context;
-    private ArrayList<String> imgList;
+    private ArrayList<Banner> imgList;
     private ViewPagerClickListener viewPagerClickListener;
-    public AutoScrollpagerAdapter(ViewPagerClickListener viewPagerClickListener, Context context, ArrayList<String> itemList, boolean isInfinite) {
+    public AutoScrollpagerAdapter(ViewPagerClickListener viewPagerClickListener, Context context, ArrayList<Banner> itemList, boolean isInfinite) {
         super(context, itemList, isInfinite);
         this.context = context;
         this.imgList = itemList;
@@ -38,11 +39,11 @@ public class AutoScrollpagerAdapter extends LoopingPagerAdapter<String> {
         convertView.setOnClickListener(v -> {
 
              if(viewPagerClickListener!=null){
-                 viewPagerClickListener.onPageClicked(imgList.get(listPosition));
+                 viewPagerClickListener.onPageClicked(imgList.get(listPosition).getImage(),imgList.get(listPosition).getUrl());
              }
         });
 
         ImageView imageView = convertView.findViewById(R.id.ivLogo);
-        Glide.with(context).load(imgList.get(listPosition)).into(imageView);
+        Glide.with(context).load("http://dnote.xyz/advertise/".concat("banner/").concat(imgList.get(listPosition).getImage())).into(imageView);
     }
 }

@@ -5,49 +5,60 @@ import com.google.gson.annotations.SerializedName;
 
 public class Banner {
 
-@SerializedName("id")
-@Expose
-private String id;
-@SerializedName("date_time")
-@Expose
-private String dateTime;
-@SerializedName("image")
-@Expose
-private String image;
-@SerializedName("status")
-@Expose
-private String status;
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("date_time")
+    @Expose
+    private String dateTime;
+    @SerializedName("image")
+    @Expose
+    private String image;
+    @SerializedName("status")
+    @Expose
+    private String status;
+    @SerializedName("url")
+    @Expose
+    private String url;
 
-public String getId() {
-return id;
-}
+    public String getUrl() {
+        return url;
+    }
 
-public void setId(String id) {
-this.id = id;
-}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-public String getDateTime() {
-return dateTime;
-}
+    public String getId() {
+        return id;
+    }
 
-public void setDateTime(String dateTime) {
-this.dateTime = dateTime;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-public String getImage() {
-return image;
-}
+    public String getDateTime() {
+        return dateTime;
+    }
 
-public void setImage(String image) {
-this.image = image;
-}
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
 
-public String getStatus() {
-return status;
-}
+    public String getImage() {
+        return image;
+    }
 
-public void setStatus(String status) {
-this.status = status;
-}
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
 }
