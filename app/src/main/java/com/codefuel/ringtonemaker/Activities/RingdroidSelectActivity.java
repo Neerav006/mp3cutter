@@ -160,8 +160,6 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
-
-
     }
 
     @Override
