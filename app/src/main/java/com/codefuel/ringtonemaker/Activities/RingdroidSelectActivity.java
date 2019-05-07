@@ -56,6 +56,7 @@ import com.codefuel.ringtonemaker.Ringdroid.Utils;
 import com.codefuel.ringtonemaker.Views.FastScroller;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -84,6 +85,8 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
     int mPos;
     private SearchView mSearchView;
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
+
     /**
      * Called when the activity is first created.
      */
@@ -151,8 +154,25 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
         mAdView = findViewById(R.id.bannerAd);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
+
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -502,6 +522,12 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
     }
 
     private void startEditor(int pos) {
+
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
 
         Intent intent = new Intent(mContext, RingdroidEditActivity.class);
         intent.putExtra("FILE_PATH", mData.get(pos).mPath);
