@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -17,10 +18,14 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_splash);
         Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
         mRToneImageView = (ImageView) findViewById(R.id.image_view_bell);
-        mRToneImageView.startAnimation(shake);
+        // mRToneImageView.startAnimation(shake);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -30,6 +35,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        }, 1000);
+        }, 2000);
     }
 }

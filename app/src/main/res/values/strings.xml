@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">RTone</string>
+    <string name="app_name">WhizRingTone</string>
     <string name="ringdroid_app_name">RTone</string>
 
     <!--
@@ -17,15 +17,15 @@
     <string name="sdcard_shared">Sorry, RTone can\'t run while your handset is mounted as a USB device.</string>
 
     <string name="button_options">Options</string>
-    <string name="about_title">About RTone</string>
-    <string name="about_text"><![CDATA[Use RTone to edit MP3, OGG, WAV, AAC, and AMR audio files and create ringtones, alarms, and notifications from them.\n\nTip: copy audio files to your SD card using a USB cable.\n\nTip: tap anywhere on the waveform to start playing at that position.\n\nTip: while playing, tap the word Start or End to quickly set the start and end markers to the current playback time.]]></string>
+    <string name="about_title">About WhizRingTone</string>
+    <string name="about_text"><![CDATA[Use WhizRingTone to edit MP3, OGG, WAV, AAC, and AMR audio files and create ringtones, alarms, and notifications from them.\n\nTip: copy audio files to your SD card using a USB cable.\n\nTip: tap anywhere on the waveform to start playing at that position.\n\nTip: while playing, tap the word Start or End to quickly set the start and end markers to the current playback time.]]></string>
 
     <string name="choose_contact_title">Assign ringtone to which contact?</string>
     <string name="success_contact_ringtone">Successfully assigned ringtone to:</string>
 
 
-    <string name="bad_extension_error">Sorry, RTone is not yet able to edit files of type</string>
-    <string name="no_extension_error">Sorry, RTone can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+    <string name="bad_extension_error">Sorry, WhizRingTone is not yet able to edit files of type</string>
+    <string name="no_extension_error">Sorry, WhizRingTone can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
 
 
     <!--
@@ -123,13 +123,13 @@
     <string name="delete_audio">Delete Audio</string>
 
     <string name="confirm_delete_ringdroid">Are you sure?</string>
-    <string name="confirm_delete_non_ringdroid">Are you sure?  This file was not created using RTone!</string>
+    <string name="confirm_delete_non_ringdroid">Are you sure?  This file was not created using WhizRingTone!</string>
 
     <string name="delete_ok_button">Delete</string>
     <string name="delete_cancel_button">Cancel</string>
 
     <string name="delete_failed">Unable to delete file</string>
-    <string name="artist_name">RTone artist</string>
+    <string name="artist_name">WhizRingTone artist</string>
 
 
     <!--
@@ -154,7 +154,7 @@
     <string name="set_ringtone">Set Ringtone!</string>
     <string name="write_setting_text">Ringtone make requiers permission to \'Write Settings\' in order to set your ringtone.\n After granting permission, try setting your ringtone again.</string>
     <string name="permission_required">Permission required.</string>
-    <string name="permission_required_desc">Allow RTone to access your ringtones and music library</string>
+    <string name="permission_required_desc">Allow WhizRingTone to access your ringtones and music library</string>
     <string name="allow">Allow</string>
     <string name="contacts">Contacts</string>
     <string name="search_library">Search..</string>
