@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/myProfileBG"
-   >
+    android:background="@color/myProfileBG">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,11 +13,21 @@
         android:layout_marginRight="18sp"
         android:orientation="vertical">
 
-        <ImageView
-            android:scaleType="fitXY"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:src="@drawable/codefuel" />
+            android:layout_height="120dp"
+            android:background="#252429"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/whizadsbay" />
+
+        </FrameLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +59,7 @@
                     android:layout_marginLeft="12sp"
                     android:clickable="true"
                     android:padding="2sp"
-                    android:text="http://www.codefuelindia.com/"
+                    android:text="http://www.whizadsbay.com"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -78,7 +87,7 @@
                     android:layout_marginLeft="12sp"
                     android:clickable="true"
                     android:padding="2sp"
-                    android:text="info@codefuelindia.com"
+                    android:text="info@whizadsbay.com"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -88,7 +97,8 @@
                 android:layout_marginStart="18sp"
                 android:layout_marginLeft="18sp"
                 android:orientation="vertical"
-                android:padding="5sp">
+                android:padding="5sp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -140,7 +150,7 @@
                         android:layout_weight="7"
                         android:lines="5"
                         android:padding="2sp"
-                        android:text="F1, Ashwamegh City Center,\nOpp. Medical College,\nPolytechnic - Gadhoda road,\nHimmatnagar,\nGujarat 383001"
+                        android:text="401, SAGAR APPARTMENT, PALDI,\nMALINATH PARK, RANG SAGAR DERASAR,\nAHMEDABAD - 380007"
                         android:textSize="15sp" />
 
                     <ImageView

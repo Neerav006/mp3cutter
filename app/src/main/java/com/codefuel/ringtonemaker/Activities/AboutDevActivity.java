@@ -127,7 +127,7 @@ public class AboutDevActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void jumpToAddress() {
-        Uri gmmIntentUri = Uri.parse("geo:23.574246, 72.965482");
+        Uri gmmIntentUri = Uri.parse("geo:22.9981445, 72.5610034");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         if (mapIntent.resolveActivity(getPackageManager()) != null) {
