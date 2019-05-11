@@ -337,7 +337,6 @@ public class RingdroidEditActivity extends AppCompatActivity implements MarkerVi
             // just applying it to a contact.  When they return here,
             // they're done.
             finish();
-            return;
         }
     }
 

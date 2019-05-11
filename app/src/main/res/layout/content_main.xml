@@ -9,21 +9,22 @@
     tools:showIn="@layout/app_bar_main">
 
 
-
     <com.asksira.loopingviewpager.LoopingViewPager
         android:id="@+id/vpAds"
-        android:layout_width="435dp"
-        android:layout_height="365dp"
+        android:layout_width="424dp"
+        android:layout_height="186dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:isInfinite="true"
+        android:layout_marginBottom="8dp"
         app:autoScroll="true"
-        app:scrollInterval="3000"
+        app:isInfinite="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintVertical_bias="0.36"
+        app:scrollInterval="3000" />
 
 
     <TextView
