@@ -16,6 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.LinearLayout;
 
 import com.asksira.loopingviewpager.LoopingPagerAdapter;
 import com.asksira.loopingviewpager.LoopingViewPager;
@@ -26,6 +27,8 @@ import com.codefuel.ringtonemaker.Models.MyBanner;
 import com.codefuel.ringtonemaker.R;
 import com.codefuel.ringtonemaker.ViewPagerClickListener;
 import com.codefuel.ringtonemaker.common.RetrofitClient;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
@@ -41,15 +44,24 @@ public class MainActivity extends AppCompatActivity
     private LoopingViewPager loopingViewPager;
     private GetBanner getBanner;
     private ArrayList<String> XMENArray = new ArrayList<>();
+    private AdView mAdView;
+    private LinearLayout llRingToneCreator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        llRingToneCreator = findViewById(R.id.llRingToneCreator);
+
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         MobileAds.initialize(MainActivity.this, "ca-app-pub-3940256099942544~3347511713");
 
+
+        mAdView = findViewById(R.id.bannerAd);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -69,6 +81,13 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
+
+        llRingToneCreator.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, RingdroidSelectActivity.class);
+            startActivity(i);
+        });
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
