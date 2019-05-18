@@ -156,7 +156,7 @@ public class RingdroidSelectActivity extends AppCompatActivity implements Search
         mAdView.loadAd(adRequest);
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-5043599433354824/3625732399");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 

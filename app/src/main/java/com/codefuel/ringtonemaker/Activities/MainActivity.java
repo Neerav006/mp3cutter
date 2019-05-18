@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
         llRingToneCreator = findViewById(R.id.llRingToneCreator);
 
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
-        MobileAds.initialize(MainActivity.this, "ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(MainActivity.this, "ca-app-pub-5043599433354824~1360383900");
 
 
         mAdView = findViewById(R.id.bannerAd);
