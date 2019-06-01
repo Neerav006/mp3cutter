@@ -1,9 +1,15 @@
 package com.codefuel.ringtonemaker.Activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.View;
@@ -18,14 +24,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.LinearLayout;
 
-import com.asksira.loopingviewpager.LoopingPagerAdapter;
 import com.asksira.loopingviewpager.LoopingViewPager;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.codefuel.ringtonemaker.Adapters.AutoScrollpagerAdapter;
-import com.codefuel.ringtonemaker.Dialogs.AdsViewDialogFragment;
 import com.codefuel.ringtonemaker.Models.Banner;
 import com.codefuel.ringtonemaker.Models.MyBanner;
 import com.codefuel.ringtonemaker.R;
-import com.codefuel.ringtonemaker.ViewPagerClickListener;
 import com.codefuel.ringtonemaker.common.RetrofitClient;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<String> XMENArray = new ArrayList<>();
     private AdView mAdView;
     private LinearLayout llRingToneCreator;
-
+    private ConstraintLayout constraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,27 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         llRingToneCreator = findViewById(R.id.llRingToneCreator);
+        constraintLayout = findViewById(R.id.constraintMain);
+
+        //Glide image
+
+        Glide.with(MainActivity.this)
+                .load(R.drawable.ringtone_background)
+                .into(new CustomTarget<Drawable>() {
+
+
+                    @Override
+                    public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                        constraintLayout.setBackground(resource);
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+                        // Remove the Drawable provided in onResourceReady from any Views and ensure
+                        // no references to it remain.
+                    }
+                });
+
 
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         MobileAds.initialize(MainActivity.this, "ca-app-pub-5043599433354824~1360383900");

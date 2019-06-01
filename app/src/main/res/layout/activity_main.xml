@@ -23,6 +23,7 @@
         app:menu="@menu/activity_main_drawer" >
 
         <ImageView
+            android:layout_margin="15dp"
             android:background="@android:color/black"
             android:src="@drawable/whizadsbay"
             android:layout_gravity="bottom"
