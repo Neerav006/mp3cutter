@@ -69,14 +69,14 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <com.codefuel.ringtonemaker.Views.FastScroller
+    <com.codefuelindia.ringtonemaker.Views.FastScroller
         android:id="@+id/fast_scroller"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_above="@+id/bannerAd"
         android:layout_below="@+id/app_bar"
         android:layout_alignParentRight="true"
-        android:padding="5dp"></com.codefuel.ringtonemaker.Views.FastScroller>
+        android:padding="5dp"></com.codefuelindia.ringtonemaker.Views.FastScroller>
 
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"

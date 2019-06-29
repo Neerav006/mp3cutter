@@ -41,12 +41,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
-                <com.codefuel.ringtonemaker.Ringdroid.WaveformView
+                <com.codefuelindia.ringtonemaker.Ringdroid.WaveformView
                     android:id="@+id/waveform"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent" />
 
-                <com.codefuel.ringtonemaker.Ringdroid.MarkerView
+                <com.codefuelindia.ringtonemaker.Ringdroid.MarkerView
                     android:id="@+id/endmarker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                     android:nextFocusDown="@+id/info"
                     android:src="@drawable/end_dragger" />
 
-                <com.codefuel.ringtonemaker.Ringdroid.MarkerView
+                <com.codefuelindia.ringtonemaker.Ringdroid.MarkerView
                     android:id="@+id/startmarker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
